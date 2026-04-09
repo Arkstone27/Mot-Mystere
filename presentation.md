@@ -18,10 +18,12 @@ Il y a 5 fichiers pythons :
 - **simplification_texte.py** qui permet d'enlever les espaces dans les fichiers txt contenues dans le répertoire data
 
 ## Notation
-La notation des mots présents dans le fichier * *dico_francais.txt* * est une partie importante du projet
+La notation des mots présents dans le fichier *dico_francais.txt* est une partie importante du projet
 Après de nombreux tests voici le comment se déroule la calcul final des notes :
 
-1. A partir du texte contenues dans le fichier data on produit une table qui permet de récupérer le nombre d'occurrence de tel lettre après tel lettre (et cela de manière récursive)
-   exemple: Il y a 534 occurrences de la lettre a, après cet lettre a, il y a 43 occurrences de la lettre l. Après cet lettre l, il y a 13 occurrences de la lettre i. (On a donc 13 occurrences du motif "ali".
+1. A partir du texte contenues dans le fichier data on produit une table qui permet de récupérer le nombre d'occurrence de telle lettre après telle lettre (et cela de manière récursive)
+   exemple: Il y a 534 occurrences de la lettre a, après cet lettre a, il y a 43 occurrences de la lettre l. Après cet lettre l, il y a 13 occurrences de la lettre i. (On a donc 13 occurrences du motif "ali").
 
-3. 
+3. Pour chaque mot on calcule la note en faisant la somme des nombres d'occurrences des motifs du mot, a partir de la table d'occurrences.
+   
+5. Problème les notes sont énormes (cf figure 1) et mal répartit pour cela on commence par faire le Z-Score des notes. On soustrais chaque note par la moyenne des notes puis on divise par l'écart type des notes (cf figure 2). Maintenant que les notes sont bien répartit, il suffit d'appliquer une fonction de linéarisation (ex: divisé par le maximum), ici j'ai utilisé la fonction sigmoide. Ensuite on multiplie par 10 et on obtient ainsi des notes de 0 à 10 pour chaque mot (10 étant le mot le plus "complexe" à trouvé).
