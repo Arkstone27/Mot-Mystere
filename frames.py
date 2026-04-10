@@ -113,13 +113,13 @@ class FrameInfo(ctk.CTkFrame):
         ctk.CTkLabel(self.frame_droit, text="MOT MYSTERE", font=("Courier", 30, "bold")).pack()
         ctk.CTkLabel(self.frame_droit, text="by Mattéo", font=("Courier", 15, "italic", "bold")).pack()
 
-        self.frame_droit.pack(side="right")
+        self.frame_droit.pack(side="right", expand=True)
 
         self.frame_gauche = ctk.CTkFrame(self, fg_color="transparent")
         self.btn_graphe = ctk.CTkButton(self.frame_gauche, text="Répartition des notes", command=self.master.afficher_graphe, font=("Courier", 15, "bold"))
         self.btn_graphe.pack()
 
         ctk.CTkLabel(self.frame_gauche, text="Session : " + pseudo, font=("Courier", 20, "bold")).pack()
-        self.frame_gauche.pack(side="left")
+        self.frame_gauche.pack(side="left", padx=20)
 if __name__ == '__main__':
     ouvrir_statistiques()
