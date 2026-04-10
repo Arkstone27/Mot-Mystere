@@ -22,6 +22,8 @@ La notation des mots présents dans le fichier *dico_francais.txt* est une parti
 Après de nombreux tests voici comment se déroule la calcul final des notes :
 
 1. A partir du texte contenues dans le répertoire *data* on produit une table qui permet de récupérer le **nombre d'occurrence** de telle lettre après telle lettre (et cela de manière récursive). Par exemple, il y a 534 occurrences de la lettre `a`. Après cet lettre `a`, il y a 43 occurrences de la lettre `l`. Après cet lettre `l`, il y a 13 occurrences de la lettre `i`. On a donc 13 occurrences du motif `ali`.
+![alt text](https://github.com/Arkstone27/Mot-Mystere/blob/8434243203a06f69939204dc981d1ac2628586dd/Figure_1.png "Logo Title Text 1")
+
 
 3. Pour chaque mot on calcule la note en faisant la **somme des nombres d'occurrences** des motifs du mot, a partir de la table d'occurrences.
    
