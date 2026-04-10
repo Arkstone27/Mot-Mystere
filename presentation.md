@@ -25,7 +25,7 @@ Après de nombreux tests voici comment se déroule la calcul final des notes :
 ![Erreur de chargement du graphe...](https://github.com/Arkstone27/Mot-Mystere/blob/0305da3c92845b1ffc40682129dd4f8683a7ec1f/Figure_1.png "Figure 1 : Répartition sans normalisation")
 
 
-3. Pour chaque mot on calcule la note en faisant la **somme des nombres d'occurrences** des motifs du mot, a partir de la table d'occurrences.
+3. Pour chaque mot on fait la **somme des nombres d'occurrences** des motifs du mot, a partir de la table d'occurrences. On divise la somme obtenue par la taille du mot pour obtenir la note.
    
 5. Problème les notes sont énormes *(cf figure 1)* et mal répartit. Pour rectifier cela on doit appliquer une fonction de **normalisation** (ex: divisé par le maximum), ici j'ai utilisé la fonction [sigmoïde](https://fr.wikipedia.org/wiki/Sigmo%C3%AFde_(math%C3%A9matiques)). Mais il faut **préparer les notes** avant, on commence donc par faire le [Z-Score](https://fr.wikipedia.org/wiki/Cote_Z_(statistiques)) des notes. On soustrais chaque note par la moyenne des notes puis on divise par l'écart type des notes. Ensuite on passe chaque note dans la fonction sigmoïde et on multiplie par 10 pour obtenir des notes de 0 à 10 pour chaque mot. Le mot avec une note de 10 est donc le plus "complexe" à trouvé *(cf figure 2)*.
 
