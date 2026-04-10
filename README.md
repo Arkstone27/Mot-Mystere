@@ -1,6 +1,8 @@
 # Mot-Mystere
 Un jeu inspiré du jeu du pendu, développé dans le cadre des cours de NSI Terminale
 
+![Erreur de chargement...](https://github.com/Arkstone27/Mot-Mystere/blob/40ac6cc9c95b24df5d9e838e84d4bcddf510a441/app.png "Interface du jeu")
+
 ## Installation
 1.  Installe les dépendances :
 
