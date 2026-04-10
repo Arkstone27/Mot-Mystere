@@ -100,7 +100,7 @@ def afficher_repartition(data_mots):
     data_mots["position"] = data_mots["mot"].apply(compter)
     data_mots["taille"] = data_mots["mot"].apply(len)
 
-    figure =  px.scatter(data_mots, x="position", y="note", hover_name='mot')
+    figure =  px.scatter(data_mots, x="position", y="note", hover_name='mot', color="note")
 
     figure.write_html("data\\graphe_repartition.html")
     chemin_graphe = os.path.abspath("data\\graphe_repartition.html")
