@@ -22,9 +22,11 @@ La notation des mots présents dans le fichier *dico_francais.txt* est une parti
 Après de nombreux tests voici comment se déroule la calcul final des notes :
 
 1. A partir du texte contenues dans le répertoire *data* on produit une table qui permet de récupérer le **nombre d'occurrence** de telle lettre après telle lettre (et cela de manière récursive). Par exemple, il y a 534 occurrences de la lettre `a`. Après cet lettre `a`, il y a 43 occurrences de la lettre `l`. Après cet lettre `l`, il y a 13 occurrences de la lettre `i`. On a donc 13 occurrences du motif `ali`.
-![alt text](https://github.com/Arkstone27/Mot-Mystere/blob/8434243203a06f69939204dc981d1ac2628586dd/Figure_1.png "Logo Title Text 1")
+![Erreur de chargement du graphe...](https://github.com/Arkstone27/Mot-Mystere/blob/8434243203a06f69939204dc981d1ac2628586dd/Figure_1.png "Répartition sans normalisation")
 
 
 3. Pour chaque mot on calcule la note en faisant la **somme des nombres d'occurrences** des motifs du mot, a partir de la table d'occurrences.
    
 5. Problème les notes sont énormes *(cf figure 1)* et mal répartit. Pour rectifier cela on doit appliquer une fonction de **normalisation** (ex: divisé par le maximum), ici j'ai utilisé la fonction [sigmoïde](https://fr.wikipedia.org/wiki/Sigmo%C3%AFde_(math%C3%A9matiques)). Mais il faut **préparer les notes** avant, on commence donc par faire le [Z-Score](https://fr.wikipedia.org/wiki/Cote_Z_(statistiques)) des notes. On soustrais chaque note par la moyenne des notes puis on divise par l'écart type des notes. Ensuite on passe chaque note dans la fonction sigmoïde et on multiplie par 10 pour obtenir des notes de 0 à 10 pour chaque mot. Le mot avec une note de 10 est donc le plus "complexe" à trouvé *(cf figure 2)*.
+
+![Erreur de chargement du graphe...](https://github.com/Arkstone27/Mot-Mystere/blob/a0877cfa4d6aab7b537ab199bf9e93cd6ab95753/Figure_2.png "Répartition avec normalisation")
