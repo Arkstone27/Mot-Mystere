@@ -13,8 +13,7 @@ Un jeu inspiré du jeu du pendu, développé dans le cadre des cours de NSI Term
     `main.py`
 
 ## Utilisation
-Après avoir rentrée votre pseudonyme et avoir selectionne votre difficulté/niveau, vous pouvez lancer une partie en cliquant sur le bouton `Nouvelle partie`.
-A la fermeture il est possible d'enregistrer les progrès pour actualiser le classement.
+Pour jouer, renseignez votre pseudonyme et le niveau souhaité, puis cliquez sur `Nouvelle partie`. Vos progrès peuvent être enregistrés en fin de session afin d'actualiser le classement.
     
 ## Modules
 Ce projet utilise 5 modules:
