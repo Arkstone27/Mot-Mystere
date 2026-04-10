@@ -11,6 +11,10 @@ Un jeu inspiré du jeu du pendu, développé dans le cadre des cours de NSI Term
 2.  Exécute le fichier :
 
     `main.py`
+
+## Utilisation
+Après avoir rentrée votre pseudonyme et avoir selectionne votre difficulté/niveau, vous pouvez lancer une partie en cliquant sur le bouton `Nouvelle partie`.
+A la fermeture il est possible d'enregistrer les progrès pour actualiser le classement.
     
 ## Modules
 Ce projet utilise 5 modules:
