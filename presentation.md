@@ -21,7 +21,7 @@ Il y a 5 fichiers pythons :
 La notation des mots présents dans le fichier *dico\_francais.txt* est une partie importante du projet.
 Après de nombreux tests voici comment se déroule la calcul final des notes :
 
-1. A partir du texte contenu dans le répertoire *data* on produit une table qui permet de récupérer le **nombre d'occurrences** de telle lettre après telle lettre (et cela de manière récursive). Par exemple, il y a 534 occurrences de la lettre `a`. Après cette lettre `a`, il y a 43 occurrences de la lettre `l`. Après cette lettre `l`, il y a 13 occurrences de la lettre `i`. On a donc 13 occurrences du motif `ali`.
+1. A partir du texte contenu dans le répertoire *data* (essentiellement des sous-titres de films) on produit une table qui permet de récupérer le **nombre d'occurrences** de telle lettre après telle lettre (et cela de manière récursive). Par exemple, il y a 534 occurrences de la lettre `a`. Après cette lettre `a`, il y a 43 occurrences de la lettre `l`. Après cette lettre `l`, il y a 13 occurrences de la lettre `i`. On a donc 13 occurrences du motif `ali`.
 2. Pour chaque mot on fait la **somme des nombres d'occurrences** des motifs du mot, à partir de la table d'occurrence. On divise la somme obtenue par la taille du mot pour obtenir la note.
 
 ![Erreur de chargement du graphe...](https://github.com/Arkstone27/Mot-Mystere/blob/0305da3c92845b1ffc40682129dd4f8683a7ec1f/Figure\_1.png "Figure 1 : Répartition sans normalisation")
